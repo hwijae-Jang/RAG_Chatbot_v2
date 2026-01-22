@@ -204,16 +204,16 @@ search_success_rate = (검색 성공 질문 수) / (전체 질문 수)
 ### **3단계 개선 추이**
 
 ![키워드 정확도](results/3stage_keyword_accuracy.png)
-*키워드 정확도: 73.9% → 82.2% → 80.6%*
+[*1.키워드 정확도: 73.9% → 82.2% → 80.6%*]
 
 ![검색 성공률](results/3stage_search_success.png)
-*검색 성공률: 3단계 모두 100% 유지*
+[*2.검색 성공률: 3단계 모두 100% 유지*]
 
 ![개선 기여도](results/improvement_breakdown.png)
-*문서 최적화 단계에서 키워드 8.3%p, After 단계에서 LLM 평가 9.3%p 개선*
+[*3.문서 최적화 단계에서 키워드 8.3%p, After 단계에서 LLM 평가 9.3%p 개선*]
 
 ![응답 시간](results/3stage_response_time.png)
-*평균 응답 시간: 4.1초 → 5.4초 → 5.6초 (일관성 유지)*
+[4.*평균 응답 시간: 4.1초 → 5.4초 → 5.6초 (일관성 유지)*]
 
 ---
 
