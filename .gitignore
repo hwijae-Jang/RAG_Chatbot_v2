@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# API Keys (중요!)
+.env
+*.key
+.secrets/
+config.ini
+
+# ChromaDB
+chroma_db/
+*.db
+*.sqlite
+
+# 임시 파일
+*.tmp
+*.log
+.DS_Store
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# 평가 결과 (선택적)
+# results/*.json
+# results/*.png
+
+# 포트폴리오
+portfolio/*.pdf
+portfolio/*.pptx
+portfolio/*.zip
+
+# OS
+Thumbs.db
