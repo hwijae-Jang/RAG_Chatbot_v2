@@ -79,7 +79,7 @@
 | **Vector DB** | ChromaDB |
 | **Frontend** | Streamlit 1.31.0 |
 | **Embedding** | text-embedding-3-small |
-| **Evaluation** | LLM-as-Judge (사실 60% + 완결성 40%) |
+| **Evaluation** | LLM-as-Judge (사실 80% + 완결성 20%) |
 
 ---
 
@@ -144,12 +144,12 @@ RAG_Chatbot/
 │   └── after/                   # 6개 MD 파일 (통합 최적화)
 │
 ├── results/                      # 평가 결과
-│   ├── 3stage_keyword_accuracy (1).png
-│   ├── 3stage_search_success (1).png
-│   ├── improvement_breakdown (1).png
-│   ├── 3stage_response_time (1).png
+│   ├── 3stage_keyword_accuracy.png
+│   ├── 3stage_search_success.png
+│   ├── improvement_breakdown.png
+│   ├── 3stage_response_time.png
 │   ├── evaluation_3stages_20260119_160506.json
-│   └── evaluation_3stages_report (1).txt
+│   └── evaluation_3stages_report.txt
 │
 ├── .gitignore                    # Git 제외 파일
 ├── requirements.txt              # Python 패키지
@@ -203,16 +203,16 @@ search_success_rate = (검색 성공 질문 수) / (전체 질문 수)
 
 ### **3단계 개선 추이**
 
-![키워드 정확도](results/3stage_keyword_accuracy%20(1).png)
+![키워드 정확도](results/3stage_keyword_accuracy%20.png)
 *키워드 정확도: 73.9% → 82.2% → 80.6%*
 
-![검색 성공률](results/3stage_search_success%20(1).png)
+![검색 성공률](results/3stage_search_success%20.png)
 *검색 성공률: 3단계 모두 100% 유지*
 
-![개선 기여도](results/improvement_breakdown%20(1).png)
+![개선 기여도](results/improvement_breakdown%20.png)
 *문서 최적화 단계에서 키워드 8.3%p, After 단계에서 LLM 평가 9.3%p 개선*
 
-![응답 시간](results/3stage_response_time%20(1).png)
+![응답 시간](results/3stage_response_time%20.png)
 *평균 응답 시간: 4.1초 → 5.4초 → 5.6초 (일관성 유지)*
 
 ---
@@ -370,7 +370,7 @@ MIT License - 자유롭게 사용, 수정, 배포 가능
 
 **장휘재 (Hwi-Jae Jang)**
 - GitHub: [@hwijae-Jang](https://github.com/hwijae-Jang)
-- Email: your.email@example.com
+- Email: hwijae35@naver.com
 
 ---
 
@@ -379,7 +379,7 @@ MIT License - 자유롭게 사용, 수정, 배포 가능
 프로젝트에 대한 질문이나 제안사항이 있으시면 언제든 연락 주세요!
 
 - **Issues**: [GitHub Issues](https://github.com/hwijae-Jang/RAG_Chatbot/issues)
-- **Email**: your.email@example.com
+- **Email**: hwijae35@naver.com
 
 ---
 
