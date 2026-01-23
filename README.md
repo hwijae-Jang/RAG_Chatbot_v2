@@ -228,7 +228,7 @@
 | **Vector DB** | ChromaDB |
 | **Frontend** | Streamlit 1.31.0 |
 | **Embedding** | text-embedding-3-small |
-| **Evaluation** | LLM-as-Judge (사실 60% + 완결성 40%) |
+| **Evaluation** | LLM-as-Judge (사실 80% + 완결성 20%) |
 
 ---
 
@@ -335,7 +335,7 @@ keyword_score = (발견된 필수 키워드 수) / (전체 필수 키워드 수)
 #### **2. LLM-as-Judge 평가**
 - **사실 정확성** (0-100점): MD 파일 내용과 사실 일치도
 - **완결성** (0-100점): 필요 정보 포함 여부
-- **종합 점수**: 사실 60% + 완결성 40%
+- **종합 점수**: 사실 80% + 완결성 20%
 
 **3단계 결과:**
 - Before: 77.5%
