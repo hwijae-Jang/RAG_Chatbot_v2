@@ -70,6 +70,155 @@
 
 ---
 
+## 💬 실제 챗봇 응답 비교 (Before → Middle → After)
+
+3개 대표 질문에 대한 **실제 챗봇 응답**을 단계별로 비교하여 개선 효과를 확인할 수 있습니다.
+
+---
+
+### **Q1. 제주항공 게이트 노쇼 위약금**
+
+<table>
+<tr>
+<td width="33%"><b>Before 버전</b> 🔴</td>
+<td width="33%"><b>Middle 버전</b> 🟡</td>
+<td width="33%"><b>After 버전</b> 🟢</td>
+</tr>
+<tr>
+<td><img src="screenshots/before_q1.png" width="100%"/></td>
+<td><img src="screenshots/middle_q1.png" width="100%"/></td>
+<td><img src="screenshots/after_q1.png" width="100%"/></td>
+</tr>
+<tr>
+<td valign="top">
+<b>문제점:</b><br>
+❌ 표 데이터 잘림 (Chunk 800자)<br>
+❌ 국내선 정보만 제공<br>
+❌ 구체적 금액 누락
+</td>
+<td valign="top">
+<b>개선 사항:</b><br>
+✅ 표 일부 포함 (Chunk 1200자)<br>
+△ 국내/국제선 구분<br>
+△ 일부 금액만 제공
+</td>
+<td valign="top">
+<b>최종 개선:</b><br>
+✅ 완전한 표 데이터 (Chunk 2000자)<br>
+✅ 지역별 상세 위약금<br>
+✅ 한국/일본/중국/홍콩 등 전체
+</td>
+</tr>
+</table>
+
+**개선 효과:**
+- **Before**: 국내선 15,000원만 언급, 국제선 정보 없음
+- **Middle**: 국내/국제선 구분 시작, 일부 금액 제공
+- **After**: 전 지역 위약금 완전 제공 (한국 200,000원, 일본 20,000엔, 중국 1,100위안 등 16개 지역 전체)
+
+---
+
+### **Q2. 아시아나 환불 위약금**
+
+<table>
+<tr>
+<td width="33%"><b>Before 버전</b> 🔴</td>
+<td width="33%"><b>Middle 버전</b> 🟡</td>
+<td width="33%"><b>After 버전</b> 🟢</td>
+</tr>
+<tr>
+<td><img src="screenshots/before_q2.png" width="100%"/></td>
+<td><img src="screenshots/middle_q2.png" width="100%"/></td>
+<td><img src="screenshots/after_q2.png" width="100%"/></td>
+</tr>
+<tr>
+<td valign="top">
+<b>문제점:</b><br>
+❌ 일반적 설명만<br>
+❌ 시점별 구분 없음<br>
+❌ 구체적 금액 없음
+</td>
+<td valign="top">
+<b>개선 사항:</b><br>
+✅ 환불 시점별 구분<br>
+✅ 일부 금액 정보<br>
+△ 표 형식 미완성
+</td>
+<td valign="top">
+<b>최종 개선:</b><br>
+✅ 완전한 클래스별 표<br>
+✅ J/C/D/B 클래스 전체<br>
+✅ 시점별 완벽 구분
+</td>
+</tr>
+</table>
+
+**개선 효과:**
+- **Before**: "항공사 웹사이트 확인" 권유만, 구체적 정보 없음
+- **Middle**: 환불 시점 구분 시작 (91일 전, 90-61일 등), 일부 금액 제공
+- **After**: J/C/D/B 클래스별 완전한 표 4개, 시점별 금액 완전 제공
+
+---
+
+### **Q3. 대한항공 국제선 환불 수수료 표**
+
+<table>
+<tr>
+<td width="33%"><b>Before 버전</b> 🔴</td>
+<td width="33%"><b>Middle 버전</b> 🟡</td>
+<td width="33%"><b>After 버전</b> 🟢</td>
+</tr>
+<tr>
+<td><img src="screenshots/before_q3.png" width="100%"/></td>
+<td><img src="screenshots/middle_q3.png" width="100%"/></td>
+<td><img src="screenshots/after_q3.png" width="100%"/></td>
+</tr>
+<tr>
+<td valign="top">
+<b>문제점:</b><br>
+❌ 표 완전히 누락<br>
+❌ 텍스트 설명만<br>
+❌ 실질적 정보 없음
+</td>
+<td valign="top">
+<b>개선 사항:</b><br>
+✅ 일부 표 포함<br>
+✅ FLEX/Standard/Saver 구분<br>
+△ 중거리/장거리 정보 불완전
+</td>
+<td valign="top">
+<b>최종 개선:</b><br>
+✅ 완전한 표 4개 제공<br>
+✅ 일반석/중거리/장거리/프리미엄<br>
+✅ 모든 시점별 금액 완전
+</td>
+</tr>
+</table>
+
+**개선 효과:**
+- **Before**: 표 완전 누락, "항공사 공식 웹사이트 확인" 안내만
+- **Middle**: 일반석 환불 수수료 표 시작, FLEX/Standard/Saver 구분
+- **After**: 4개 완전한 표 제공 (일반석, 중거리, 장거리, 프리미엄 이코노미 V/W)
+
+---
+
+### **📊 3단계 응답 품질 비교 요약**
+
+| 지표 | Before 🔴 | Middle 🟡 | After 🟢 |
+|------|----------|----------|---------|
+| **표 데이터 완결성** | ❌ 잘림 (800자) | △ 일부 (1200자) | ✅ 완전 (2000자) |
+| **구체적 금액 제공** | ❌ 없음 | △ 일부 | ✅ 전체 |
+| **시점별 구분** | ❌ 없음 | ✅ 있음 | ✅ 완벽 |
+| **클래스별 구분** | ❌ 없음 | △ 일부 | ✅ 완전 |
+| **지역/노선별 정보** | ❌ 없음 | △ 일부 | ✅ 완전 |
+| **사용자 추가 검색 필요** | ❌ 필요 | △ 일부 필요 | ✅ 불필요 |
+
+**핵심 개선 포인트:**
+1. **Before → Middle**: 동의어 30개 구축으로 키워드 검색 개선 (+8.3%p)
+2. **Middle → After**: Chunk 2000으로 확대하여 표 데이터 완전 포함, LLM 평가 대폭 개선 (+9.3%p)
+
+---
+
 ## 🛠️ 기술 스택
 
 | 카테고리 | 기술 |
@@ -79,7 +228,7 @@
 | **Vector DB** | ChromaDB |
 | **Frontend** | Streamlit 1.31.0 |
 | **Embedding** | text-embedding-3-small |
-| **Evaluation** | LLM-as-Judge (사실 80% + 완결성 20%) |
+| **Evaluation** | LLM-as-Judge (사실 60% + 완결성 40%) |
 
 ---
 
@@ -143,6 +292,12 @@ RAG_Chatbot/
 │   ├── middle/                  # 8개 MD 파일 (동의어 최적화)
 │   └── after/                   # 6개 MD 파일 (통합 최적화)
 │
+├── screenshots/                  # 챗봇 응답 스크린샷 (9개)
+│   ├── before_q1.png            # Before 버전 응답
+│   ├── middle_q1.png            # Middle 버전 응답
+│   ├── after_q1.png             # After 버전 응답
+│   └── ...
+│
 ├── results/                      # 평가 결과
 │   ├── 3stage_keyword_accuracy.png
 │   ├── 3stage_search_success.png
@@ -204,16 +359,16 @@ search_success_rate = (검색 성공 질문 수) / (전체 질문 수)
 ### **3단계 개선 추이**
 
 ![키워드 정확도](results/3stage_keyword_accuracy.png)
-[*1.키워드 정확도: 73.9% → 82.2% → 80.6%*]
+*키워드 정확도: 73.9% → 82.2% → 80.6%*
 
 ![검색 성공률](results/3stage_search_success.png)
-[*2.검색 성공률: 3단계 모두 100% 유지*]
+*검색 성공률: 3단계 모두 100% 유지*
 
 ![개선 기여도](results/improvement_breakdown.png)
-[*3.문서 최적화 단계에서 키워드 8.3%p, After 단계에서 LLM 평가 9.3%p 개선*]
+*문서 최적화 단계에서 키워드 8.3%p, After 단계에서 LLM 평가 9.3%p 개선*
 
 ![응답 시간](results/3stage_response_time.png)
-[4.*평균 응답 시간: 4.1초 → 5.4초 → 5.6초 (일관성 유지)*]
+*평균 응답 시간: 4.1초 → 5.4초 → 5.6초 (일관성 유지)*
 
 ---
 
