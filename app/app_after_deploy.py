@@ -202,7 +202,7 @@ def initialize_vectordb():
         for fp in glob.glob(pat, recursive=True):
             if fp.endswith(".md") and fp not in seen and Path(fp).is_file():
                 seen.add(fp)
-                md_files.append(fp)
+                md_files.append(Path(fp))
 
     if not md_files:
         st.error("❌ MD 파일을 찾을 수 없습니다")
