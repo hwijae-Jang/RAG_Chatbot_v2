@@ -200,9 +200,12 @@ def initialize_vectordb():
 
     for pat in patterns:
         for fp in glob.glob(pat, recursive=True):
-            if fp.endswith(".md") and fp not in seen and Path(fp).is_file():
-                seen.add(fp)
-                md_files.append(Path(fp))
+            if fp.endswith(".md") and Path(fp).is_file():
+                # 절대 경로로 변환하여 중복 체크
+                abs_path = Path(fp).resolve()
+                if abs_path not in seen:
+                    seen.add(abs_path)
+                    md_files.append(abs_path)
 
     if not md_files:
         st.error("❌ MD 파일을 찾을 수 없습니다")
